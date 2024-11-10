@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Cierre de Ventas</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; }
+        h1 { text-align: center; color: #333; }
+        .response, .feedback { margin-top: 20px; }
+        button { padding: 10px 20px; margin: 10px; background-color: #0073e6; color: white; border: none; border-radius: 5px; }
+        .cta { margin-top: 30px; text-align: center; }
+        .cta a { display: inline-block; padding: 12px 24px; background-color: #28a745; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<h1>Simulador de Cierre de Ventas</h1>
+<p>Elige una técnica de cierre para finalizar la venta:</p>
+
+<div class="response">
+    <button onclick="respuestaCierre('urgencia')">"Esta oferta termina pronto. ¿Quieres aprovecharla?"</button>
+    <button onclick="respuestaCierre('valor')">"Con esto, alcanzarás tus metas en menor tiempo."</button>
+    <button onclick="respuestaCierre('emocional')">"Imagina los resultados alcanzados con esta herramienta. ¿Empezamos?"</button>
+    <button onclick="respuestaCierre('limitacion')">"Quedan pocas unidades en promoción. ¿Reservo una para ti?"</button>
+    <button onclick="respuestaCierre('prueba')">"¿Te gustaría probarlo gratis una semana para evaluar si es adecuado para ti?"</button>
+    <button onclick="respuestaCierre('condicional')">"Si resuelve tu necesidad, ¿quieres iniciar ahora mismo?"</button>
+</div>
+
+<div id="feedback" class="feedback"></div>
+
+<div class="cta">
+    <a href="https://klicana.work/YZmsH3" target="_blank">Únete a Lucrachat IA</a>
+</div>
+
+<script>
+function respuestaCierre(tipo) {
+    let feedback = "";
+    if (tipo === 'urgencia') {
+        feedback = "Excelente elección. La urgencia motiva la acción inmediata.";
+    } else if (tipo === 'valor') {
+        feedback = "Buena estrategia. Enfatizar el valor justifica la decisión de compra.";
+    } else if (tipo === 'emocional') {
+        feedback = "Muy bien. La conexión emocional crea motivación en el cliente.";
+    } else if (tipo === 'limitacion') {
+        feedback = "Bien hecho. La limitación de unidades impulsa al cliente a decidir.";
+    } else if (tipo === 'prueba') {
+        feedback = "Excelente opción. Una prueba gratuita reduce el riesgo y facilita la decisión.";
+    } else if (tipo === 'condicional') {
+        feedback = "Buena respuesta. El cierre condicional permite al cliente visualizar el beneficio inmediato.";
+    }
+    document.getElementById('feedback').innerHTML = feedback;
+}
+</script>
+
+</body>
+</html>
